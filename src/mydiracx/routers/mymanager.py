@@ -22,6 +22,7 @@ from mydiracx.db.mydb.db import myDB
 LAST_MODIFIED_FORMAT = "%a, %d %b %Y %H:%M:%S GMT"
 
 router = DiracxRouter()
+#router = DiracxRouter(require_auth=False) #also comment user_info for local tests
 
 class CustomObject(TypedDict):
     PathValueAsString: str
