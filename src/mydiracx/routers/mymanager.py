@@ -38,8 +38,8 @@ EXAMPLE_PATHVALUE = "/example/test"
 async def get_example_object(
     user_info: Annotated[UserInfo, Depends(verify_dirac_token)],
     my_db: Annotated[myDB, Depends(myDB.transaction)],
-    path_value: Annotated[str, Body(examples=EXAMPLE_PATHVALUE)],
-
+    #path_value: Annotated[str, Body(examples=EXAMPLE_PATHVALUE)],
+    path_value: str,
 ):
     return await my_db.search(path_value)
 
